@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+html, * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto';
+}
+
+.container {
+    height: 100vh;
+    overflow: auto;
+}
+
+.download div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+}
+
+.download {
+    background: #ffff;
+    margin-bottom: 20px;
+    padding: 10px 30px;
+}
+
+.upload {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 50px;
+    background: #ffff;
+    padding-top: 30px;
+}
+
+button {
+    width: 200px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+p {
+    font-size: 14px;
+    margin-top: -30px;
+}
+
+#drop_image {
+    height: 150px;
+    width: 100%;
+    border: 2px dashed #00004C;;
+    width: 300px;
+    text-align: center;
+    padding: 10px;
+}
+
+.image_view img {
+    height: 100px;
+}
+
+button {
+    height: 30px;
+    background-color: #00004C;
+    color: #ffff;
+    border: none;
+    border-radius: 4px;
+}
+
+#file_name {
+    color: #00004C;
+}
+
+.filter-blue {
+    filter: invert(9%) sepia(33%) saturate(4882%) hue-rotate(228deg) brightness(111%) contrast(129%);
+}

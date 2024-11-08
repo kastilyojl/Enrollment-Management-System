@@ -1,0 +1,10 @@
+<input type="hidden" name="dept" value="<?php echo isset($_POST['dept']) ? $_POST['dept'] : ''; ?>">
+<input type="hidden" name="type" value="<?php echo isset($_POST['type']) ? $_POST['type'] : ''; ?>">
+<input type="hidden" name="prevschool" value="<?php echo isset($_POST['prevschool']) ? $_POST['prevschool'] : ''; ?>">
+<input type="hidden" name="yrlevel" value="<?php echo isset($_POST['yrlevel']) ? $_POST['yrlevel'] : ''; ?>">
+<input type="hidden" name="branch" value="<?php echo isset($_POST['branch']) ? $_POST['branch'] : ''; ?>">
+<input type="hidden" name="strand" value="<?php echo isset($_POST['strand']) ? $_POST['strand'] : ''; ?>">
+<input type="hidden" name="lrn" value="<?php echo isset($_POST['lrn']) ? $_POST['lrn'] : ''; ?>">
+<input type="hidden" name="voucher" value="<?php echo isset($_POST['voucher']) ? $_POST['voucher'] : ''; ?>">
+<input type="hidden" name="ESC" value="<?php echo isset($_POST['ESC']) ? $_POST['ESC'] : ''; ?>">
+<input type="hidden" name="Scholar" value="<?php echo isset($_POST['Scholar']) ? $_POST['Scholar'] : ''; ?>">

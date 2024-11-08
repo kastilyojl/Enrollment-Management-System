@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
+
+:root {
+    --blue: #0abde3;
+    --darkblue: #00004C;
+    --light-color: #666;
+    --bg: #e4e2e2;
+    --white-color: #ffffff;
+    --border: 0.1rem solid rgba(0, 0, 0, .1);
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+* {
+    font-family: "Roboto Serif", serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html,
+body {
+    height: 100%;
+    background-image: linear-gradient(to bottom, var(--darkblue), var(--bg));
+    /* Top to bottom gradient */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--light-color);
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.container {
+    position: relative;
+    max-width: 800px;
+    margin: 50px auto;
+    overflow: hidden;
+    background: transparent;
+    /* Set container background to transparent */
+    box-shadow: var(--box-shadow);
+    border-radius: 10px;
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.steps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+}
+
+.steps img {
+    max-width: 80%;
+    /* Adjust this value to change the maximum width of the images */
+    max-height: 100vh;
+    /* Adjust this value to change the maximum height of the images */
+    border-radius: 10px;
+    backdrop-filter: blur(8px);
+    /* Glassmorphism effect */
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--darkblue);
+    color: var(--white-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 10px;
+    box-shadow: var(--box-shadow);
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--darkblue);
+    color: var(--white-color);
+    margin-top: auto;
+    /* Ensures footer sticks to the bottom */
+}
+
+.footer .credit {
+    font-size: 1rem;
+}
+
+.footer .credit span {
+    color: var(--blue);
+}
+
+/* Mobile Version */
+@media (max-width: 600px) {
+    .steps img {
+        max-width: 100%;
+        max-height: 50vh;
+        /* Ensure image scales with viewport height */
+    }
+
+    button {
+        padding: 5px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .footer .credit {
+        font-size: 0.8rem;
+    }
+}

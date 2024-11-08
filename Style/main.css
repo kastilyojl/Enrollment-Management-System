@@ -1,0 +1,24 @@
+:root {
+    --main-color: #00004C;
+    --logo-size: 60px;
+    --bg: #e4e2e2;
+    --white-color: #ffffff;
+}
+
+html, * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+    text-transform: capitalize;
+}
+
+body {
+    height: 100svh;
+    max-height: 1000px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    background: var(--bg);
+}
+

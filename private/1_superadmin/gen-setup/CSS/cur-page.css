@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --blue: #0abde3;
+    --darkblue: #00004C;
+    --light-color: #666;
+    --bg: #e4e2e2;
+    --white-color: #ffffff;
+    --border: 0.1rem solid rgba(0, 0, 0, .1);
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    --main-color: #0abde3;
+    /* Ensure this is defined */
+}
+
+*,
+html {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    /* text-transform: capitalize; */
+    transition: all 0.2s linear;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 100%;
+}
+
+.card {
+    background: linear-gradient(135deg, var(--darkblue), var(--blue));
+    height: 250px;
+    width: calc(50% - 20px);
+    max-width: 300px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.5s;
+}
+
+.img_container {
+    height: 100px;
+    width: 100px;
+    background: var(--white-color);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    height: 80%;
+    width: 80%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.type_student {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--white-color);
+    margin-top: 10px;
+}
+
+/* Updated CSS with anchor tag styles */
+
+a {
+    margin-top: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 80%;
+    font-size: 18px;
+    border: none;
+    border-radius: 50px;
+    background: var(--white-color);
+    color: var(--darkblue);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+a:hover {
+    background: var(--blue);
+    color: var(--white-color);
+    transition: all 0.5s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        margin-top: 20vh;
+        margin-bottom: 20vh;
+    }
+
+    .card {
+        width: calc(100% - 20px);
+        max-width: calc(100% - 20px);
+    }
+}

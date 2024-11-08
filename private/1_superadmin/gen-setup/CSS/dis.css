@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --blue: #0abde3;
+    --darkblue: #00004C;
+    --light-color: #666;
+    --bg: #e4e2e2;
+    --white-color: #ffffff;
+    --border: 0.1rem solid rgba(0, 0, 0, .1);
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+* {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-transform: none;
+    /* Changed to 'none' for better readability */
+    transition: all .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    /* Increased for better scaling */
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+
+/* Updated CSS with max 2 cards per row and maximized width */
+
+body {
+    background-color: var(--bg);
+    color: var(--darkblue);
+    line-height: 1.6;
+}
+
+.container {
+    width: 95%;
+    /* Maximizing width */
+    margin: 0 auto;
+    padding: 4rem 0;
+}
+
+.programs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    /* Maximum of 2 cards per row */
+    gap: 2rem;
+}
+
+.program {
+    background-color: var(--white-color);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease;
+}
+
+.program:hover {
+    transform: translateY(-5px);
+}
+
+.program h2 {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--darkblue);
+}
+
+.program p {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: var(--light-color);
+}
+
+.year-boxes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.year-box {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.grade-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.grade-box-item {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.program h3 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.subjects li {
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    color: var(--light-color);
+}
+
+.subjects li strong {
+    font-weight: bold;
+    color: var(--darkblue);
+}
+
+/* Additional styles for links */
+a {
+    color: var(--blue);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--darkblue);
+}

@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --blue: #0abde3;
+    --darkblue: #00004C;
+    --light-color: #666;
+    --bg: #e4e2e2;
+    --white-color: #ffffff;
+}
+
+/* Global styles */
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    margin: 0;
+    overflow-y: scroll;
+    min-height: 100svh;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+h4 {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.275rem;
+    color: var(--darkblue);
+}
+
+/* Admin Dashboard Layout Skeleton */
+
+.wrapper {
+    align-items: stretch;
+    display: flex;
+    width: 100%;
+}
+
+/* Sidebar */
+#sidebar {
+    max-width: 300px;
+    min-width: 300px;
+    background: var(--darkblue);
+    transition: all 0.35s ease-in-out;
+    overflow-y: auto;
+    /* Add scrollbar */
+}
+
+/* Add CSS for logo */
+.sidebar-logo {
+    margin-top: 5vh;
+    display: grid;
+    place-items: center;
+    height: 100px;
+    /* Assuming you want the logo container to have a fixed height */
+}
+
+.sidebar-logo img {
+    max-width: 100%;
+    /* Ensure the image doesn't exceed the container */
+    max-height: 100px;
+    /* Ensure the image doesn't exceed the container */
+}
+
+.sidebar-nav {
+    flex-grow: 1;
+    list-style: none;
+    margin-bottom: 0;
+    padding-left: 0;
+    margin-left: 0;
+    overflow-y: auto;
+    /* Add scrollbar */
+    max-height: calc(95vh - 135px);
+    /* Adjust max-height to fit content */
+}
+
+.sidebar-header {
+    color: var(--white-color);
+    font-size: 1.5rem;
+    padding: 1.5rem;
+    margin-bottom: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar-link {
+    margin-left: 0.5vw;
+    padding: .625rem 1.625rem;
+    color: var(--bg);
+    position: relative;
+    display: block;
+    font-size: 1.1rem;
+}
+
+.sidebar-link i {
+    margin-right: 1rem;
+}
+
+.sidebar-link:hover {
+    background: var(--light-color);
+    color: var(--white-color);
+    transition: all 0.5s ease-in-out;
+}
+
+.sidebar-link[data-bs-toggle="collapse"]::after {
+    border: solid;
+    border-width: 0 .075rem .075rem 0;
+    content: "";
+    display: inline-block;
+    padding: 2px;
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all .2s ease-out;
+}
+
+.sidebar-link[data-bs-toggle="collapse"].collapsed::after {
+    transform: rotate(45deg);
+    transition: all .2s ease-out;
+}
+
+.sidebar-link.active {
+    background: var(--bg);
+    color: var(--darkblue);
+}
+
+.avatar {
+    height: 40px;
+    width: 40px;
+}
+
+/* Main Content */
+.main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+    transition: all 0.35s ease-in-out;
+    width: 100%;
+    background: var(--bg);
+}
+
+.content {
+    flex: 1;
+    padding: 1rem;
+    /* Adjust as needed */
+    overflow-y: auto;
+    /* Add scrollbar */
+}
+
+.card {
+    box-shadow: 0 0 .875rem 0 rgba(34, 46, 60, .05);
+    margin-bottom: 24px;
+}
+
+.illustration {
+    background: var(--white-color);
+    color: var(--light-color);
+}
+
+.illustration-img {
+    max-width: 200px;
+    width: 100%;
+}
+
+/* Sidebar Toggle */
+/* Sidebar and Footer Collapse */
+#sidebar.collapsed,
+.sidebar-footer.collapsed {
+    margin-left: -300px;
+}
+
+/* Sidebar Footer */
+.sidebar-footer {
+    max-width: 300px;
+    min-width: 300px;
+    background: var(--darkblue);
+    transition: all 0.35s ease-in-out;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background-color: var(--darkblue);
+    color: #fff;
+}
+
+.sidebar-footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.sidebar-footer a:hover {
+    color: #ccc;
+    background: var(--light-color);
+}
+
+/* Footer */
+.footer .credit {
+    color: var(--darkblue);
+    font-size: 1.1rem;
+    padding: 10px;
+}
+
+.footer .credit span {
+    color: var(--blue);
+    text-transform: capitalize;
+}
+
+
+/* Mobile View */
+@media (max-width: 767.98px) {
+
+    .navbar,
+    footer {
+        width: 100vw;
+    }
+
+    /* Hide scrollbars on mobile */
+    #sidebar::-webkit-scrollbar,
+    .content::-webkit-scrollbar,
+    .sidebar-nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    .sidebar-header,
+    .sidebar-link,
+    .sidebar-footer {
+        padding: 1rem;
+        /* Adjust padding for mobile */
+    }
+}
+
+@media (max-width: 767.98px) {
+
+    .navbar,
+    footer {
+        width: 100vw;
+    }
+
+    /* Hide scrollbars on mobile */
+    #sidebar::-webkit-scrollbar,
+    .content::-webkit-scrollbar,
+    .sidebar-nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    .sidebar-header,
+    .sidebar-link,
+    .sidebar-footer {
+        padding: .5rem;
+        /* Adjusted padding for mobile */
+    }
+
+    .content {
+        padding: 1rem;
+        /* Revert content padding to original value */
+        min-width: 400px;
+        /* Set a minimum width for the content area */
+    }
+
+    .sidebar-link {
+        margin-left: 3vw;
+        /* Adjust the left margin as needed */
+    }
+
+}
+
+@media only screen and (max-width: 570px) {
+
+    #sidebar-toggle {
+        background: #E4E2E2;
+    }
+
+    .content.px-3.py-2 {
+        padding: 0 !important;
+    }
+
+    .navbar {
+        position: absolute;
+        left: 0;
+    }
+
+    iframe {
+        margin-top: 60px;
+    }
+}

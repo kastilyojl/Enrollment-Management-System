@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+html, * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto';
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 90px 1fr;
+    row-gap: 20px;
+}
+
+.download {
+    background-color: #ffff;
+}
+
+.upload-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+    background: #ffff;
+    padding: 20px;
+}
+
+.download div{
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.upload {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 50px;
+    background: #ffff;
+}
+
+button {
+    width: 200px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+#drop_image p {
+    font-size: 14px;
+    margin-top: -30px;
+}
+
+#drop_image {
+    height: 150px;
+    width: 100%;
+    border: 2px dashed #00004C;;
+    width: 300px;
+    text-align: center;
+    padding: 10px;
+}
+
+.image_view img {
+    height: 100px;
+}
+
+button {
+    height: 30px;
+    background-color: #00004C;
+    color: #ffff;
+    border: none;
+    border-radius: 4px;
+}
+
+#file_name {
+    color: #00004C;
+}
+
+.filter-blue {
+    filter: invert(9%) sepia(33%) saturate(4882%) hue-rotate(228deg) brightness(111%) contrast(129%);
+}
+
+#file_list {
+    display: none;
+    width: 300px;
+    text-align: center;
+}
+
+.file_list img {
+    height: 30px;
+    padding: 0 10px;
+}
+
+.file_name {
+    display: flex;
+    align-items: center;
+    border: 1px solid #00004C;
+    margin-bottom: 4px;
+}
+
+.file_name p {
+    width: 100%;
+    text-align: start;
+}
+
+.file_name .remove {
+    padding: 10px;
+    cursor: pointer;
+}

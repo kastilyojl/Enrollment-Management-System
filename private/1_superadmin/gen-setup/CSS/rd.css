@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --blue: #0abde3;
+    --darkblue: #00004C;
+    --light-color: #666;
+    --bg: #e4e2e2;
+    --white-color: #ffffff;
+    --border: 0.1rem solid rgba(0, 0, 0, .1);
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+* {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    /* text-transform: capitalize; */
+    transition: all 0.2s linear;
+}
+
+/* Base settings */
+body {
+    background: var(--bg);
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+
+/* Form Container */
+.container {
+    border: 1px solid var(--darkblue);
+    padding: 15px;
+    width: 100%;
+    max-width: 95%;
+    margin: 0 auto;
+    background: var(--white-color);
+    font-weight: 600;
+    transition: width 0.3s;
+}
+
+h2 {
+    text-align: center;
+    color: var(--light-color);
+}
+
+.name {
+    padding: 10px 0;
+    margin: 0;
+    background: var(--darkblue);
+    color: var(--white-color);
+}
+
+/* Button and Input Container */
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: var(--white-color);
+    gap: 10px;
+}
+
+/* Input Box Styling */
+.input-box {
+    margin-top: 2%;
+    margin-left: 1.5%;
+    padding: 10px 15px;
+    width: 60%;
+    border: 1px solid var(--darkblue);
+    border-radius: 5px;
+    background: #f9f9f9;
+    color: var(--darkblue);
+    font-size: 16px;
+    transition: background 0.3s, border-color 0.3s;
+}
+
+.input-box:focus {
+    background: var(--white-color);
+    border-color: var(--blue);
+}
+
+.form-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.input-box {
+    flex: 1;
+    margin-right: 10px;
+    /* Space between the input and the add button */
+}
+
+form .button-container .add-new-button {
+    background: var(--darkblue);
+    color: var(--white-color);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    /* Pushes the Add New button to the far right */
+}
+
+a.add-new-button {
+    transform: translateY(.9vw);
+}
+
+a.add-new-button:hover {
+    background: var(--blue);
+}
+
+/* Table styling */
+.table-container {
+    padding: 20px;
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white-color);
+}
+
+.t-content {
+    width: 100%;
+    text-align: center;
+    border: 1px solid var(--darkblue);
+}
+
+.t-content th,
+.t-content td {
+    padding: 10px;
+    border-bottom: 1px solid var(--white-color);
+}
+
+.t-content th {
+    background: var(--light-color);
+    color: var(--white-color);
+    text-align: center;
+}
+
+.t-content tr:hover {
+    background-color: #aca8a8;
+}
+
+.t-content button {
+    margin: 0.1vw;
+    padding: 6px 10px;
+    border: none;
+    background: var(--darkblue);
+    color: var(--white-color);
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+}
+
+.t-content button:hover {
+    background: var(--blue);
+}
+
+/* Sort controls */
+.sort-container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 20px;
+}
+
+.sort-container label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.sort-container select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .button-container input {
+        width: 60%;
+        margin-left: 5%;
+    }
+
+    .button-container .add-new-button {
+        padding: 8px 12px;
+    }
+
+    .table-container {
+        padding: 10px;
+    }
+
+    .table {
+        width: 100%;
+        display: block;
+        overflow-x: auto;
+    }
+
+    .t-content {
+        width: 100%;
+        display: block;
+        overflow-x: auto;
+    }
+
+    .t-content th,
+    .t-content td {
+        white-space: nowrap;
+    }
+
+    .button-container input {
+        width: 80%;
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+}
+
+/* Pagination controls */
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination-container button {
+    margin: 0 5px;
+    padding: 8px 12px;
+    border: none;
+    background: var(--darkblue);
+    color: var(--white-color);
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.pagination-container button:hover {
+    background: var(--blue);
+}
+
+.pagination-container #pageNum {
+    margin: 0 10px;
+    font-weight: bold;
+}
