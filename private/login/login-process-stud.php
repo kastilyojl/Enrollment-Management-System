@@ -85,7 +85,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         $queryClearance = mysqli_query($conn, $sqlClearance);
                         $Clearance = mysqli_fetch_array($queryClearance);
 
-                        require('C:\xampp\htdocs\en4\public\Enrollment_v3\src\Workflow\User-Info\studInfo.php');
+                        require('../../Student_Profile/studInfo.php');
+                        // require('C:\xampp\htdocs\en4\public\Enrollment_v3\src\Workflow\User-Info\studInfo.php');
                     }
                 
                 // Redirect based on user type              
