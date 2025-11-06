@@ -37,6 +37,8 @@ Registrar
 
 - Can monitor student clearance status.
 
+- Can view the status of student records to determine eligibility for enrollment based on past records (payment history, grades, etc.) using a **decision tree algorithm**.
+
 Professor
 
 - Can submit grades via the portal.
@@ -61,6 +63,6 @@ Features
 
 - Administrative dashboards for Accounting, Registrar, and Professor
 
-Clearance form management
+- Clearance form management
 
-Report submission for disciplinary actions
+- Report submission for disciplinary actions
